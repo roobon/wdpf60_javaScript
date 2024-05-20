@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        // let i = 1;
+        // let text = "";
+
+        // while(i<=10){
+
+        //     text = "<div>" + text + i + "</div>" ;    
+        //     i++;
+        // }
+        // document.write(text);
+    </script>
+
+
+
+<script>
+    //const flowers = new Array("Rose", "Tulip", "Belly", "Waterlily");
+
+    // const flowers = ["Rose", "Tulip", "Belly", "Waterlily"];
+
+    // let i = 0;
+    // let output = "<ol>";
+
+    // while(i<flowers.length){
+    //     output += "<li>" + flowers[i]    + "</li>";
+    //     i++;
+    // }
+
+    // output += "</ol>";
+
+    // document.write(output);
+
+</script>
+
+<script>
+    const flowers = ["Rose", "Tulip", "Belly", "Waterlily"];
+
+    let i = 0;
+    let output = "<table>";
+        output += "<tr><th>SN</th><th>Name</th></tr>"
+
+    while(i<flowers.length){
+        sn = i + 1;
+        output += "<tr><td>" + sn + "</td>";
+        output += "<td>" + flowers[i] + "</td></tr>" ;
+                
+        i++;
+    }
+    output += "</table>";
+    document.write(output);
+</script>
+
+</body>
+</html>
