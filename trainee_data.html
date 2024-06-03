@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform">
+        Name : <br>
+        <input type="text" name="name" placeholder="enter your name"> <br>
+        Remarkes: <br>
+        <textarea name="remarks" id=""></textarea> <br>
+        Sex: <br>
+        Male <input type="radio" name="gender" value="male" >
+        FeMale <input type="radio" name="gender" value="female"> <br>
+        Checkbox: <br>
+        <input type="checkbox" class="course" value="NT"> NT <br>
+        <input type="checkbox" class="course" value="IAD"> IAD <br>
+        <input type="checkbox" class="course" value="DDD"> DDD <br>
+        <input type="checkbox" class="course" value="ESAD"> ESAD <br>
+
+        Location: <br>
+        <select name="location" id="">
+            <option>Banani</option>
+            <option>Dhanmonddi</option>
+            <option>Mirpur</option>   
+        </select> <br>
+        <button type="button" onclick="info()">Click here</button>
+    </form>
+
+    <script>
+       function info(){
+           let name = document.myform.name.value;
+           let remarks = document.myform.remarks.value;
+           let gender = document.myform.gender.value;
+           let location = document.myform.location.value;
+           //alert(location);
+           const courses = document.getElementsByClassName("course");
+            let data = "";
+           for(let i=0;i<courses.length; i++){
+               if(courses[i].checked){
+                data +=  courses[i].value + ", ";
+               }
+           }         
+           //alert(data);
+
+           let output = "<h1>Trainee Information</h1>";
+           output += "Name: " + name + "<br>";
+           output += "Gender: " + gender + "<br>";
+           output += "Location: " + location + "<br>";
+           output += "Remarks: " + remarks + "<br>";
+           output += "Courses: " + data + "<br>";
+
+           let mw = window.open("", "", "height=250,width=400");
+           mw.document.write(output);
+       } 
+    </script>
+</body>
+</html>
