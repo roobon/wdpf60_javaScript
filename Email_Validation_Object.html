@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validation.js"></script>
+</head>
+<body>
+    <form name="login">
+        <input type="text" name="email"><br>
+        <input type="button" name="submit" value="SUBMIT" onclick="checkMail()">
+    </form>
+
+    <script>
+       function checkMail(){
+        let m = document.login.email.value;
+        if(m==""){
+            alert("Can't be empty")
+        } else {
+            let Checkobj1 = new Validation(m);
+        //console.log(Checkobj1);
+        Checkobj1.validate();
+
+        }
+       
+       }
+    </script>
+    
+</body>
+</html>
